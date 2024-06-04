@@ -1,0 +1,82 @@
+{% extends 'layouts/blank.html' %}
+{% load static %}
+{% block content %} 
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Soil Detetctor</title>
+    <link rel="stylesheet" href="{% static "css2/style2.css" %}">
+    <script src="https://unpkg.com/htmx.org@1.5.0"></script>
+</head>
+<body>
+    <header class="hero">
+        <div class="hero-content">
+            <h1>Welcome to Soil Detector</h1>
+            <p>Your journey to productivity starts here.</p>
+            <button hx-get="/load-more-info" hx-trigger="click" hx-target="#additional-content" hx-swap="innerHTML">Learn More</button>
+        </div>
+    </header>
+    
+    <section id="additional-content" class="additional-content">
+        <!-- Additional content will be loaded here -->
+    </section>
+
+    <section id="services" class="services">
+        <div class="container">
+            <h2>Our Services</h2>
+            <div class="service-cards">
+                <div class="service-card">
+                    <h3>Service One</h3>
+                    <p>Description of service one. Highlight key features and benefits.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Service Two</h3>
+                    <p>Description of service two. Highlight key features and benefits.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Service Three</h3>
+                    <p>Description of service three. Highlight key features and benefits.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section about">
+                    <h2>About Us</h2>
+                    <p>We are committed to providing the best services to our customers. Our goal is to achieve excellence in every project we undertake.</p>
+                </div>
+                <div class="footer-section links">
+                    <h2>Quick Links</h2>
+                    <ul>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Services</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section contact">
+                    <h2>Contact Us</h2>
+                    <p>Email: info@example.com</p>
+                    <p>Phone: +123 456 7890</p>
+                    <div class="socials">
+                        <a href="#"><img src="{% static 'myapp/images/facebook-icon.png' %}" alt="Facebook"></a>
+                        <a href="#"><img src="{% static 'myapp/images/twitter-icon.png' %}" alt="Twitter"></a>
+                        <a href="#"><img src="{% static 'myapp/images/linkedin-icon.png' %}" alt="LinkedIn"></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+</body>
+</html>
+
+
+{% endblock %}
